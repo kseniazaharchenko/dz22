@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #message {
+            display: none;
+            background-color: lightblue;
+            padding: 10px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+
+        <div id="message">Please enter your name</div>
+
+        <script>
+            var nameField = document.getElementById("name");
+            var messageDiv = document.getElementById("message");
+
+            nameField.addEventListener("focus", function () {
+                messageDiv.style.display = "block";
+            });
+
+            nameField.addEventListener("blur", function () {
+                messageDiv.style.display = "none";
+            });
+        </script>
+    </body>
+
+</html>
